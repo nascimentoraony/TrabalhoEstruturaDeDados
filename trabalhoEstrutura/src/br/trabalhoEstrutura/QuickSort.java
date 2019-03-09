@@ -1,5 +1,9 @@
 package br.trabalhoEstrutura;
 
+import java.util.Arrays;
+
+import javax.swing.JOptionPane;
+
 public class QuickSort {
 
 	public static void main(String[] args) {
@@ -11,26 +15,26 @@ public class QuickSort {
 		for (int i = 0; i < A.length; i++) {
 			A[i] = (int) (Math.random() * dicionario);
 		}
+				
+		JOptionPane.showMessageDialog(null, "----- VETOR -----");
+		JOptionPane.showMessageDialog(null, (Arrays.toString(A)));
 		
+		System.out.println("---------- Vetor ----------");
+		System.out.println();
+		System.out.println(Arrays.toString(A));
+		System.out.println();
+
 		long tempoInicial = System.currentTimeMillis();
 		
-		quickSort (A, 0, A.length - 1);
+		System.out.println("------ Vetor Ordenado ------");
+		System.out.println();
+		
+			quickSort (A, 0, A.length - 1);
+		
+		System.out.println(Arrays.toString(A));
+		System.out.println();
 		
 		long tempoFinal = System.currentTimeMillis();
-		
-		System.out.println("<<<<< Vetor >>>>>");
-
-		for(int i = 0; i < A.length; i++) {
-			System.out.print("[" + A[i] + "]");
-			System.out.println();
-		}
-		
-		System.out.println("<<<<< Vetor Ordenado >>>>");
-
-		for(int i = 0; i < A.length; i++) {
-			// ainda precisa puxar o vetor ordenado !
-			System.out.println();
-		}
 		
 		System.out.println("Executado em: " + (tempoFinal - tempoInicial) + "ms");
 		
