@@ -7,14 +7,15 @@ import java.io.IOException;
 public class ArquivoHandler {
 
 	public static void main(String[] args) {
+		
+		String nome = "";
+		String linha = "";
+		//Se der erro ao executar, referente ao tamanho do vetor colocar + 1
+		int tam_vetor = Integer.parseInt(linha); //+ 1
 
 		try {
 
-			String nome = "";
-			String linha = "";
 			int cont = 0;
-			//Se der erro ao executar, referente ao tamanho do vetor colocar + 1
-			int tam_vetor = Integer.parseInt(linha); //+ 1
 
 			String vetor_txt[] = new String[tam_vetor];
 
