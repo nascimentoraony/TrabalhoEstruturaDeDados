@@ -9,8 +9,12 @@ import java.util.Scanner;
 public class ArquivoHandler {
 
 	public static void main(String[] args) {
+<<<<<<< HEAD
 		
 		String nome = "C:\\Users\\fabio\\git\\TrabalhoEstruturaDeDados\\trabalhoEstrutura\\src\\br\\trabalhoEstrutura\\teste.txt";
+=======
+
+>>>>>>> branch 'master' of https://github.com/nascimentoraony/TrabalhoEstruturaDeDados.git
 		String linha = "";
 		int tam = 0;
 		
@@ -21,11 +25,11 @@ public class ArquivoHandler {
 			//String vetor_txt[] = new String[tam_vetor];
 			
 
-			FileReader arquivo = new FileReader(nome);
+			FileReader arquivo = new FileReader("./arquivos/arquivo.txt");
 			BufferedReader ler_arquivo = new BufferedReader(arquivo);
 
 			linha = ler_arquivo.readLine();
-			tam = Integer.parseInt(linha);
+			tam =  Integer.parseInt(linha);
 			String vetor_txt[] = new String[tam];
 			while (linha != null) {
 				
