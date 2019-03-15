@@ -2,6 +2,8 @@ package br.trabalhoEstrutura;
 
 public class Ordenacao {
 	
+	//modified 
+	
 	public class QuickSort {
 		
 	}
