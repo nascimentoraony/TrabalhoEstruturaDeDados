@@ -9,12 +9,13 @@ public class QuickSort {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		int dicionario = 10;
+		int dicionario = 100;
 		int[] A = new int[dicionario];
 		
 		for (int i = 0; i < A.length; i++) {
 			A[i] = (int) (Math.random() * dicionario);
 		}
+		
 				
 		JOptionPane.showMessageDialog(null, "----- VETOR -----");
 		JOptionPane.showMessageDialog(null, (Arrays.toString(A)));
@@ -47,6 +48,7 @@ public class QuickSort {
 			quickSort(A, positionPivot + 1, end);
 		}
 	}
+	
 	
 	private static int separar (int[] A, int begin, int end) {
 		int pivot = A [begin];

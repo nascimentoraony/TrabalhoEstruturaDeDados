@@ -10,7 +10,7 @@ public class ArquivoHandler {
 
 	public static void main(String[] args) {
 		
-		String nome = "C:\\Users\\Lucas Henrique.LucasHenrique\\git\\Estrutura de Dados\\TrabalhoEstruturaDeDados\\trabalhoEstrutura\\src\\br\\trabalhoEstrutura\\teste.txt";
+		String nome = "C:\\Users\\fabio\\git\\TrabalhoEstruturaDeDados\\trabalhoEstrutura\\src\\br\\trabalhoEstrutura\\teste.txt";
 		String linha = "";
 		int tam = 0;
 		
@@ -46,11 +46,15 @@ public class ArquivoHandler {
 			for(int i=0; i<tam; i++) {
 				System.out.println(vetor_txt[i]);
 			}
+			Ordenacao ord = new Ordenacao();
+			//vetor_txt = ord.quickSort(vetor_txt[],0,3);
+			
 		} catch (IOException ex) {
 			System.err.printf("Erro: Não foi possível ler o arquivo!", ex.getMessage());
 
 		}
 		
+
 
 	}
 }

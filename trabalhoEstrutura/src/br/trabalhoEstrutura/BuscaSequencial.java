@@ -1,5 +1,6 @@
 package br.trabalhoEstrutura;
 
-public class Busca {
+public class BuscaSequencial {
 	
+		
 }
