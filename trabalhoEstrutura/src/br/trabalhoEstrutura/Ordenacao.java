@@ -1,5 +1,7 @@
 package br.trabalhoEstrutura;
 
+import java.util.Arrays;
+
 public class Ordenacao {
 	
 	public static void sort(String [] A) {
@@ -38,5 +40,7 @@ public class Ordenacao {
 		else if (i < end) {
 			quickSort(A, i, end);
 		}
+		System.out.println(Arrays.toString(A));
+		
 	}
 }
