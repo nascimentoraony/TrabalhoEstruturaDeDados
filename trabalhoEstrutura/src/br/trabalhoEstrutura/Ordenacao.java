@@ -2,12 +2,6 @@ package br.trabalhoEstrutura;
 
 public class Ordenacao {
 	
-	//modified 
-	
-	public class QuickSort {
-		
-	}
-	
 	public static void sort(String [] A) {
 		quickSort(A, 0, A.length - 1);
 	}
