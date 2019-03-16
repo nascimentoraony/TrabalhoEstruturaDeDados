@@ -19,11 +19,11 @@ public class Ordenacao {
 		String pivot = A[(end + begin) / 2];
 		
 		while (i <= j) {
-			while (A[i].compareTo(pivot) < 0 ) {
+			while (A[i].length() < pivot.length() ) {
 				i++;
 			}
 			
-			while (A[i].compareTo(pivot) > 0) {
+			while (A[i].length() > pivot.length()) {
 				j--;
 			}
 			

@@ -4,17 +4,15 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArquivoHandler {
 
 	public static void main(String[] args) {
-<<<<<<< HEAD
 		
 		String nome = "C:\\Users\\fabio\\git\\TrabalhoEstruturaDeDados\\trabalhoEstrutura\\src\\br\\trabalhoEstrutura\\teste.txt";
-=======
 
->>>>>>> branch 'master' of https://github.com/nascimentoraony/TrabalhoEstruturaDeDados.git
 		String linha = "";
 		int tam = 0;
 		
@@ -50,15 +48,13 @@ public class ArquivoHandler {
 			for(int i=0; i<tam; i++) {
 				System.out.println(vetor_txt[i]);
 			}
-			Ordenacao ord = new Ordenacao();
-			//vetor_txt = ord.quickSort(vetor_txt[],0,3);
+			
+		
+
 			
 		} catch (IOException ex) {
 			System.err.printf("Erro: Não foi possível ler o arquivo!", ex.getMessage());
 
 		}
-		
-
-
 	}
 }
