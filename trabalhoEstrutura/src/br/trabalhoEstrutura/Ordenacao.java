@@ -4,6 +4,20 @@ import java.util.Arrays;
 
 public class Ordenacao {
 	
+	//modified
+	public static void main(String[] args) {
+	
+		String [] A = {"a", "aaaaaaa", "aaaaaaaaaaaaa", ""}; 
+		
+		quickSort(A, 0, A.length - 1);
+		
+		System.out.println(Arrays.toString(A));
+	}
+	
+	public class QuickSort {
+		
+	}
+	
 	public static void sort(String [] A) {
 		quickSort(A, 0, A.length - 1);
 	}
@@ -12,14 +26,14 @@ public class Ordenacao {
 		int i = begin; 
 		int j = end; 
 		String temp; 
-		String pivot = A[(end + begin) / 2];
+		String pivot = A[begin];
 		
 		while (i <= j) {
 			while (A[i].length() < pivot.length() ) {
 				i++;
 			}
 			
-			while (A[i].length() > pivot.length()) {
+			while (A[j].length() > pivot.length()) {
 				j--;
 			}
 			
