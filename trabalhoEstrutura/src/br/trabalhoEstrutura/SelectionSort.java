@@ -7,7 +7,7 @@ public class SelectionSort {
 		String[]  A = {"aaa","aa","aaaa","a","aaaaaaa","aaaaa","aaaaaa"};
 		int min = 0;
 		String atual;
-		
+		 
 		for (int i = 0;i<A.length;i++) {
 			min = i;
 			atual = A[i];
