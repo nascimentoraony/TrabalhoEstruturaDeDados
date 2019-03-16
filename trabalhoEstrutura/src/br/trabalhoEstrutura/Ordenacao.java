@@ -54,5 +54,7 @@ public class Ordenacao {
 		else if (i < end) {
 			quickSort(A, i, end);
 		}
+		System.out.println(Arrays.toString(A));
+		
 	}
 }
