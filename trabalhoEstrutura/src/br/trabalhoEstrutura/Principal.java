@@ -6,7 +6,6 @@ public class Principal {
 		String[] A = {"aaa","aa","aaaa","a","aaaaaaa","aaaaa","aaaaaa"};
 		Ordenacao.sort(A);
 		
-		
 	}
 
 }
