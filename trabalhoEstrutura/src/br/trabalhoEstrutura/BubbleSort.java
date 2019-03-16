@@ -3,7 +3,8 @@ package br.trabalhoEstrutura;
 public class BubbleSort {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		String[]  A = {"a","aaaaaaaaaaaaaa","aaaaaaaaaaaa","aaaaaaaaaaaaaaaaa","aaaaaaaaaaaaaaaaaaaaaaaaaaa",
+				"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","aaaaaaaaa","aaaa","aaa"};
 
 	}
 
