@@ -2,6 +2,8 @@ package br.trabalhoEstrutura;
 
 public class BuscaSequencial {
 		
+	// favor testarem
+	
 	public static void buscaSequencial(String A [], String search) {
 	        int i;
 	        int busca = 0;
