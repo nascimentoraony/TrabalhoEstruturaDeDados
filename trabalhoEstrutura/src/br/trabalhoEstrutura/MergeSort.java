@@ -23,7 +23,7 @@ public class MergeSort {
 			int med = (min+max)/2;
 			dividir(V, min, med);
 			dividir(V, med+1,max);
-			conquistar(V,min,med,max);
+			conquistar(V,min,med,max); 
 		}
 	}
 	
