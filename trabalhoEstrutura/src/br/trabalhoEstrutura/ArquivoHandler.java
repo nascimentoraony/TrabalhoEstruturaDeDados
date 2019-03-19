@@ -46,7 +46,7 @@ public class ArquivoHandler {
 
 		}
 		
-		//Criando arquivo em branco.
+		//Criando arquivo em  branco.  
 		
 		File arquivo_ordenado = new File("./arquivos/ordenado.txt");
 		
