@@ -11,7 +11,7 @@ public class ArquivoHandler {
 
 	public static void main(String[] args) {
 		
-		String nome = "./arquivos/arquivo.txt";
+		String nome = "./arquivos/portuguese.txt";
 
 		String linha = "";
 		int tam = 0;
@@ -20,7 +20,7 @@ public class ArquivoHandler {
 
 			int cont = 0;
 
-			//String vetor_txt[] = new String[tam_vetor];
+			 // teste
 			
 
 			FileReader arquivo = new FileReader(nome);
@@ -43,7 +43,6 @@ public class ArquivoHandler {
 			}
 			arquivo.close();
 			
-			System.out.println("VETOR");
 
 		} catch (IOException ex) {
 			System.err.printf("Erro: Não foi possível ler o arquivo!", ex.getMessage());
