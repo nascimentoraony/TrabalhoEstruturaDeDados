@@ -47,14 +47,13 @@ public class ArquivoHandler {
 
 			for(int i=0; i<tam; i++) {
 				System.out.println(vetor_txt[i]);
+				Ordenacao.sort(vetor_txt);
 			}
-			
-		
-
 			
 		} catch (IOException ex) {
 			System.err.printf("Erro: Não foi possível ler o arquivo!", ex.getMessage());
 
 		}
+		
 	}
 }
