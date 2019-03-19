@@ -1,5 +1,7 @@
 package br.trabalhoEstrutura;
 
+import javax.swing.JOptionPane;
+
 public class BuscaSequencial {
 		
 	// favor testarem
@@ -18,10 +20,12 @@ public class BuscaSequencial {
 	        }
 	        if (busca == 1)
 	        {
-	            System.out.println(search + ", palavra encontrada na " + (i+1) + " posição!" );
+	        	JOptionPane.showMessageDialog(null, " [ " + search + " ], palavra encontrada na " + (i+1) + " posição !");
+	            System.out.println(" [ " + search + " ], palavra encontrada na " + (i+1) + " posição !");
 	        }
 	        else
 	        {
+	        	JOptionPane.showMessageDialog(null, "Palavra não encontrada !");
 	            System.out.println("Palavra não encontrada !");
 	        }
 	}
