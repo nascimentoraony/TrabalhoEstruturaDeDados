@@ -2,8 +2,6 @@ package br.trabalhoEstrutura;
 
 import java.io.IOException;
 
-import br.teste.BuscaSequencial;
-
 public class Principal {
 
 	public static void main(String[] args) throws IOException {
@@ -12,6 +10,10 @@ public class Principal {
 		String caminho = "./arquivos/portuguese.txt"; 
 		int tamanho = ArquivoHandler.tamanhoArquivo(caminho);
 		String[] vetor = new String[tamanho];
+		vetor = ArquivoHandler.ler_arquivo(caminho);
+		
+		
+		
 	}
 
 }
