@@ -38,7 +38,7 @@ public class Principal {
 			if (var == 0) {
 				long tempoInicial = System.currentTimeMillis();
 				
-				Ordenacao.BubbleSort(vetor);
+				vetor = Ordenacao.BubbleSort(vetor);
 				
 				long tempoFinal = System.currentTimeMillis();
 				
@@ -50,7 +50,7 @@ public class Principal {
 			if (var == 1) {
 				long tempoInicial = System.currentTimeMillis();
 				
-				Ordenacao.QuickSort(vetor, 0, vetor.length);
+				vetor = Ordenacao.QuickSort(vetor, 0, vetor.length);
 				
 				long tempoFinal = System.currentTimeMillis();
 				
@@ -62,7 +62,7 @@ public class Principal {
 			if (var == 2) {
 				long tempoInicial = System.currentTimeMillis();
 				
-				Ordenacao.mergeSort(vetor, 0, vetor.length);
+				vetor = Ordenacao.mergeSort(vetor, 0, vetor.length);
 				
 				long tempoFinal = System.currentTimeMillis();
 				
