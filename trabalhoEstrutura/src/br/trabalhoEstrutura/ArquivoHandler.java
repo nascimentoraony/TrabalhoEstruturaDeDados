@@ -47,15 +47,14 @@ public class ArquivoHandler {
 	public static void criar_arquivo(String[] arquivo, String caminho) {
 		//O arquivo criado salva na pasta do disco no mesmo endereço informado.
 		//String caminho = "./arquivos/arquivo.txt";
-		int tam = 0;
-		int cont = 0;
+//		int tam = 0;
+//		int cont = 0;
 		try {
 			FileOutputStream criar_arquivo = new FileOutputStream(caminho);
 			PrintWriter escrever = new PrintWriter(criar_arquivo);
-			String vetor_txt[] = new String[tam];
-			for(int i=0; i<vetor_txt.length; i++) {
-				 escrever.println(vetor_txt[i] + " |" + vetor_txt[i].length()+"| ");
-				 cont++;
+			for(int i=0; i<arquivo.length; i++) {
+				 escrever.println(arquivo[i] + " |" + arquivo[i].length()+"| ");
+//				 cont++;
 			}
 			System.out.println("Arquivo criado com sucesso! ");
 			criar_arquivo.close();
