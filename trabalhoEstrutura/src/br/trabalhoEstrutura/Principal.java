@@ -4,6 +4,8 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
+import br.teste.EscolherArquivo;
+
 public class Principal {
 
 	public static void main(String[] args) throws IOException {
@@ -11,7 +13,11 @@ public class Principal {
 		//faz a leitura do tamanho do arquivo para criação do Vetor de movimentação da principal
 		//"vetor" é que será usado, para todos os métodos.
 		
-		String caminho = "./arquivos/arquivo.txt"; 
+		// apenas comentado String caminho = "./arquivos/arquivo.txt"; 
+		
+		String caminho = EscolherArquivo.caminho();
+		// criei uma classe no pacote de testes chamada de Escolher Arquivo possibilita a melhor inserção da
+		//mesma, pois não consegui ler ou gravar os arquivos, na classe principal.
 		
 		int tamanho = ArquivoHandler.tamanhoArquivo(caminho);
 		
@@ -19,8 +25,11 @@ public class Principal {
 		
 		vetor = ArquivoHandler.ler_arquivo(caminho);
 		
-		//JOptionPane.showMessageDialog(null, "<<<<<< BEM VINDO AO SISTEMA >>>>>");
+		JOptionPane.showMessageDialog(null, "<<<<<< BEM VINDO AO SISTEMA >>>>>");
+		
 		System.out.println("lido");
+		
+		//Ordenacao.QuickSort(vetor, 0, vetor.length - 1);
 		
 		vetor = Ordenacao.mergeSort(vetor,0,tamanho-1);
 		

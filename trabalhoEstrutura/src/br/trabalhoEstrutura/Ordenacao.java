@@ -97,7 +97,8 @@ public class Ordenacao {
 			}
 		}
 		if (begin < j) {QuickSort(V, begin, j);}
-		else if (i < end) {QuickSort(V, i, end);}
+		else if (i < end) {QuickSort(V, i, end);
+		}
 		//System.out.println(Arrays.toString(V));
 		//Precisa Validar esse retorno.
 		return V;	
