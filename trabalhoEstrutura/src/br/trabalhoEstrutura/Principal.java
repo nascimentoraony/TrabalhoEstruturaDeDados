@@ -25,7 +25,7 @@ public class Principal {
 		
 		Ordenacao.SelectionSort(vetor);
 		
-		ArquivoHandler.criar_arquivo(vetor, caminho);
+		ArquivoHandler.criar_arquivo(vetor, "./arquivos/teste");
 		
 	}
 
