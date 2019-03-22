@@ -11,7 +11,7 @@ public class Principal {
 		//faz a leitura do tamanho do arquivo para criação do Vetor de movimentação da principal
 		//"vetor" é que será usado, para todos os métodos.
 		
-		String caminho = "./arquivos/portuguese.txt"; 
+		String caminho = "./arquivos/arquivo.txt"; 
 		
 		int tamanho = ArquivoHandler.tamanhoArquivo(caminho);
 		
@@ -19,13 +19,16 @@ public class Principal {
 		
 		vetor = ArquivoHandler.ler_arquivo(caminho);
 		
-		JOptionPane.showMessageDialog(null, "<<<<<< BEM VINDO AO SISTEMA >>>>>");
+		//JOptionPane.showMessageDialog(null, "<<<<<< BEM VINDO AO SISTEMA >>>>>");
+		System.out.println("lido");
 		
-		ArquivoHandler.ler_arquivo(caminho);
+		vetor = Ordenacao.mergeSort(vetor,0,tamanho-1);
 		
-		Ordenacao.SelectionSort(vetor);
+		System.out.println("Ordenado");
 		
-		ArquivoHandler.criar_arquivo(vetor, "./arquivos/teste");
+		ArquivoHandler.criar_arquivo(vetor, "./arquivos/output.txt");
+		
+		System.out.println("FIM");
 		
 	}
 

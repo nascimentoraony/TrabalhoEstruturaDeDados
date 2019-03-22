@@ -53,7 +53,7 @@ public class ArquivoHandler {
 			FileOutputStream criar_arquivo = new FileOutputStream(caminho);
 			PrintWriter escrever = new PrintWriter(criar_arquivo);
 			String vetor_txt[] = new String[tam];
-			for(int i=0; i<=vetor_txt.length; i++) {
+			for(int i=0; i<vetor_txt.length; i++) {
 				 escrever.println(vetor_txt[i] + " |" + vetor_txt[i].length()+"| ");
 				 cont++;
 			}
