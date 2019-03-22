@@ -5,10 +5,11 @@ import br.teste.BuscaSequencial;
 public class Principal {
 
 	public static void main(String[] args) {
-		String[] A = {"aaa","aa","aaaa","a", "joao", "aaaaaaa","aaaaa","aaaaaa"};
-		//Ordenacao.sort(A);
-		
-		BuscaSequencial.buscaSequencial(A, "joao");
+		//Busca caminho do arquivo - seleção do usuário
+		//faz a leitura do tamanho do arquivo para criação do Vetor de movimentação da principal
+		String caminho = "./arquivos/portuguese.txt"; 
+		int tamanho = ArquivoHandler.tamanhoArquivo(caminho);
+		String[] vetor = new String[tamanho];
 	}
 
 }
