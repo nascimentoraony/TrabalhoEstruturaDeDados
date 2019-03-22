@@ -17,8 +17,6 @@ public class Ordenacao {
 			V[i] = V[min];
 			V[min] = atual;
 		}
-		// é Teste?
-		//for(int i = 0;i<V.length;i++) {System.out.println(V[i]);}
 		return V;
 	}
 	

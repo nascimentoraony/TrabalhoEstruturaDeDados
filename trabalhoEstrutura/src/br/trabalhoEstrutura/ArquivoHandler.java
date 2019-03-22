@@ -23,7 +23,7 @@ public class ArquivoHandler {
 	}
 	
 	public static String[] ler_arquivo(String caminho) throws IOException {
-		//String caminho = "./arquivos/portuguese.txt";
+		//caminho = "./arquivos/portuguese.txt";
 		String linha = "";
 		int tam = 0;
 		String V[] = null;
