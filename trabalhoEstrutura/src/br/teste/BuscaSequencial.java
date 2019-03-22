@@ -1,4 +1,4 @@
-package br.trabalhoEstrutura;
+package br.teste;
 
 import javax.swing.JOptionPane;
 

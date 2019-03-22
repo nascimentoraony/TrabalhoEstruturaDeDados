@@ -1,4 +1,4 @@
-package br.trabalhoEstrutura;
+package br.teste;
 
 public class BuscaBinaria {
 

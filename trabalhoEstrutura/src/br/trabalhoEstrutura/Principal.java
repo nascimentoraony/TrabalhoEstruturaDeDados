@@ -1,5 +1,7 @@
 package br.trabalhoEstrutura;
 
+import br.teste.BuscaSequencial;
+
 public class Principal {
 
 	public static void main(String[] args) {
