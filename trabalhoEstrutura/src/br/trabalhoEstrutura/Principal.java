@@ -28,7 +28,7 @@ public class Principal {
 		
 		ArquivoHandler.criar_arquivo(vetor, "./arquivos/output.txt");
 		
-		System.out.println("FIM");
+		System.out.println("FIM"); 
 		
 	}
 
