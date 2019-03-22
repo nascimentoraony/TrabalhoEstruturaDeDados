@@ -5,65 +5,49 @@ import java.util.Arrays;
 public class Ordenacao {
 
 	
-	public static void SelectionSort (String A []){
+	public static String[] SelectionSort (String V []){
 		int min = 0;
-		String atual;
-		 
-		for (int i = 0;i<A.length;i++) {
+		String atual; 
+		for (int i = 0;i<V.length;i++) {
 			min = i;
-			atual = A[i];
-			for (int j = i+1;j<A.length;j++) {
-				if (A[min].length() > A[j].length()) {
-					min = j; 
-				}
+			atual = V[i];
+			for (int j = i+1;j<V.length;j++) {
+				if (V[min].length() > V[j].length()) {min = j;}
 			}
-			A[i] = A[min];
-			A[min] = atual;
+			V[i] = V[min];
+			V[min] = atual;
 		}
-		
-		for(int i = 0;i<A.length;i++) {
-			System.out.println(A[i]);
-		}
+		// é Teste?
+		//for(int i = 0;i<V.length;i++) {System.out.println(V[i]);}
+		return V;
 	}
 	
-	public static void BubbleSort(String A []) {
+	public static String[] BubbleSort(String V []) {
 		boolean val;
 		do{
 			val = false;
-			for(int i = 0;i<(A.length-1);i++) {
-				if(A[i].length()>A[i+1].length()) {
-					String aux = A[i];
-					int a = A[i].length(); 
-					int b = A[i+1].length();
-					A[i] = A[i+1];
-					A[i+1] = aux;
+			for(int i = 0;i<(V.length-1);i++) {
+				if(V[i].length()>V[i+1].length()) {
+					String aux = V[i];
+//					int a = V[i].length(); 
+//					int b = V[i+1].length();
+					V[i] = V[i+1];
+					V[i+1] = aux;
 					val = true;
 				}
 			}
 		}while(val==true);
-		
-		System.out.println(Arrays.toString(A));
+		return V;
 	}
 	
-	public static void MergeSort(String [] A) {
-
-		String ord [] = new String[A.length-1];
-				
-		System.out.println(Arrays.toString(A));
-		
-		dividir(A,0,A.length-1);
-		
-		System.out.println(Arrays.toString(A));
-				
-	}
-	
-	public static void dividir(String[] V,int min, int max) {
+	public static String[] mergeSort(String[] V,int min, int max) {
 		if(min<max) {
 			int med = (min+max)/2;
-			dividir(V, min, med);
-			dividir(V, med+1,max);
+			mergeSort(V, min, med);
+			mergeSort(V, med+1,max);
 			conquistar(V,min,med,max); 
 		}
+		return V;
 	}
 	
 	public static void conquistar(String[] V,int min, int med, int max) {
@@ -74,7 +58,6 @@ public class Ordenacao {
 		int i = min;
 		int j = med+1;
 		int k = min;
-		
 		while(i<=med && j<=max) {
 			if(aux[i].length()<=aux[j].length()) {
 				V[k] = aux[i];
@@ -90,44 +73,35 @@ public class Ordenacao {
 			k++;
 			i++;
 		}
-		
 	}
 	
-	public static void QuickSort(String A [], int begin, int end) {
+	public static String[] QuickSort(String V [], int begin, int end) {
 		int i = begin; 
 		int j = end;
 		begin = 0;
-		end = A.length - 1;
+		end = V.length - 1;
 		String temp; 
-		String pivot = A[begin];
-		
+		String pivot = V[begin];
 		while (i <= j) {
-			while (A[i].length() < pivot.length() ) {
+			while (V[i].length() < pivot.length() ) {
 				i++;
 			}
-			
-			while (A[j].length() > pivot.length()) {
+			while (V[j].length() > pivot.length()) {
 				j--;
 			}
-			
 			if (i <= j) {
 				//moment of swap.
-				temp = A[i];
-				A[i] = A[j];
-				A[j] = temp;
-				
+				temp = V[i];
+				V[i] = V[j];
+				V[j] = temp;
 				i++;
 				j--;
-				
 			}
 		}
-		if (begin < j) {
-			QuickSort(A, begin, j);
-		}
-		else if (i < end) {
-			QuickSort(A, i, end);
-		}
-		System.out.println(Arrays.toString(A));
-		
+		if (begin < j) {QuickSort(V, begin, j);}
+		else if (i < end) {QuickSort(V, i, end);}
+		//System.out.println(Arrays.toString(V));
+		//Precisa Validar esse retorno.
+		return V;	
 	}
 }
