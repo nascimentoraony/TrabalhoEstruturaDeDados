@@ -9,24 +9,10 @@ import br.teste.EscolherArquivo;
 public class Principal {
 
 	public static void main(String[] args) throws IOException {
-		// Busca caminho do arquivo - seleção do usuário
-		// faz a leitura do tamanho do arquivo para criação do Vetor de movimentação da
-		// principal
-		// "vetor" é que será usado, para todos os métodos.
-
-		// apenas comentado String caminho = "./arquivos/arquivo.txt";
-
 		int op = 0;
 		String caminho = EscolherArquivo.caminho();
-		// criei uma classe no pacote de testes chamada de Escolher Arquivo possibilita
-		// a melhor inserção da
-		// mesma, pois não consegui ler ou gravar os arquivos, na classe principal.
 
-		int tamanho = ArquivoHandler.tamanhoArquivo(caminho);
-
-		String[] vetor = new String[tamanho];
-
-		vetor = ArquivoHandler.ler_arquivo(caminho);
+		String vetor[] = ArquivoHandler.ler_arquivo(caminho);
 
 		JOptionPane.showMessageDialog(null, "<<<<<< BEM VINDO AO SISTEMA >>>>>");
 
@@ -39,7 +25,7 @@ public class Principal {
 			if (var == 0) {
 				long tempoInicial = System.currentTimeMillis();
 
-				vetor = Ordenacao.BubbleSort(vetor);
+				String vetorOrdenado[] = Ordenacao.BubbleSort(vetor);
 
 				long tempoFinal = System.currentTimeMillis();
 
