@@ -89,16 +89,16 @@ public class Principal {
 
 		do {
 
-			JOptionPane.showMessageDialog(null, "Criação do Arquivo Ordenado!");
+			JOptionPane.showMessageDialog(null, "Criação do Arquivo Ordenado...");
 			
 			String caminhoGravacao = EscolherArquivo.caminho();
-			ArquivoHandler.criar_arquivo(vetor, caminhoGravacao+"output.txt");
+			ArquivoHandler.criar_arquivo(vetorOrdenado, caminhoGravacao);
 
 			opp = 1;//JOptionPane.showConfirmDialog(null, "Finalizar a Criação ?");
 
 		} while (opp == 0);
 
-		String[] searchOtion = {};
+		String[] searchOption = {};
 
 		System.out.println("FIM");
 
