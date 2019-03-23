@@ -28,7 +28,7 @@ public class Principal {
 		
 		JOptionPane.showMessageDialog(null, "<<<<<< BEM VINDO AO SISTEMA >>>>>");
 		
-	String [] ordenationOption = {"BubbleSort", "QuickSort", "MergeSort", "SelectionSort"};
+	String [] ordenationOption = {"BubbleSort", "QuickSort", "InsertionSort", "MergeSort", "SelectionSort"};
 	int var = JOptionPane.showOptionDialog(null, "Escolha qual Método de Ordenação deseja executar;",
             "OPÇÕES",
             JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, ordenationOption
@@ -58,8 +58,19 @@ public class Principal {
 				
 				JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + "ms" );
 			}
-			
 			if (var == 2) {
+				long tempoInicial = System.currentTimeMillis();
+				
+				vetor = Ordenacao.insertionSort(vetor);
+				
+				long tempoFinal = System.currentTimeMillis();
+				
+				JOptionPane.showMessageDialog(null, "InsertionSort Executado!");
+				
+				JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + "ms" );
+			}
+			
+			if (var == 3) {
 				long tempoInicial = System.currentTimeMillis();
 				
 				vetor = Ordenacao.mergeSort(vetor, 0, vetor.length-1);
@@ -71,7 +82,7 @@ public class Principal {
 				JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + "ms" );
 			}
 			
-			if (var == 3) {
+			if (var == 4) {
 				long tempoInicial = System.currentTimeMillis();
 				
 				Ordenacao.SelectionSort(vetor);

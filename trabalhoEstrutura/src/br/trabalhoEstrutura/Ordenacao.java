@@ -36,6 +36,19 @@ public class Ordenacao {
 		return V;
 	}
 	
+	public static String[] insertionSort(String V[]) {
+		for(int i = 0;i < V.length-1;i++) {
+			String v = V[i];
+			int j = i;
+			do {
+				V[j] = V[j-1];
+				j--;
+			}while(j>0&&V[j-1].length()>v.length());
+			V[j] = v;
+		}
+		return V;
+	}
+	
 	public static String[] mergeSort(String[] V,int min, int max) {
 		if(min<max) {
 			int med = (min+max)/2;
