@@ -41,12 +41,12 @@ public class Ordenacao {
 			int med = (min+max)/2;
 			mergeSort(V, min, med);
 			mergeSort(V, med+1,max);
-			conquistar(V,min,med,max); 
+			merge(V,min,med,max); 
 		}
 		return V;
 	}
 	
-	public static void conquistar(String[] V,int min, int med, int max) {
+	public static void merge(String[] V,int min, int med, int max) {
 		String aux[] = new String[V.length];
 		for(int i=min;i<=max;i++) {
 			aux[i] = V[i];
@@ -71,31 +71,34 @@ public class Ordenacao {
 		}
 	}
 	
-	public static String[] QuickSort(String V [], int begin, int end) {
-		int i = begin; 
-		int j = end;
-		begin = 0;
-		end = V.length - 1;
-		String temp; 
-		String pivot = V[begin];
-		while (i <= j) {
-			while (V[i].length() < pivot.length() ) {
-				i++;
-			}
-			while (V[j].length() > pivot.length()) {
-				j--;
-			}
-			if (i <= j) {
-				temp = V[i];
-				V[i] = V[j];
-				V[j] = temp;
-				i++;
-				j--;
-			}
-		}
-		if (begin < j) {QuickSort(V, begin, j);}
-		else if (i < end) {QuickSort(V, i, end);
-		}
+	public static String[] QuickSort(String V [], int ini, int end) {
+
 		return V;	
+	}
+	
+	private static int separar(int[] A, int begin, int end) {
+		int pivot = A [begin];
+		int i = begin + 1; 
+		int e = end; 
+		
+		while (i <= e) {
+			if (A [i] <= pivot) {
+				i++;
+			}
+			else if (pivot < A[e]) {
+				e--;
+			}
+			else {
+				int change = A[i];
+				A[i] = A [e];
+				A[e] = change; 
+				i++;
+				e--;
+				
+			}
+		}
+		A[begin] = A[e];
+		A[e] = pivot;
+		return e;
 	}
 }
