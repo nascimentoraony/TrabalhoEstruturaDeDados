@@ -86,21 +86,21 @@ public class Principal {
 			op = JOptionPane.showConfirmDialog(null, "Deseja alterar o método de Ordenação?");
 		} while (op == 0);
 		
+		int opp = 0;
+		
+		do {
+			
+			JOptionPane.showMessageDialog(null, "Criação do Arquivo Ordenado!");
+			
+			ArquivoHandler.criar_arquivo(vetor, "./arquivos/output.txt");
+			
+			opp = JOptionPane.showConfirmDialog(null, "Finalizar a Criação ?"); 
+			
+		} while (opp == 0); 
+		
+		//String [] searchOtion = {""}
 		
 		
-		
-		System.out.println("lido");
-		
-		
-		
-		
-		//Ordenacao.QuickSort(vetor, 0, vetor.length - 1);
-		
-		vetor = Ordenacao.mergeSort(vetor,0,tamanho-1);
-		
-		System.out.println("Ordenado");
-		
-		ArquivoHandler.criar_arquivo(vetor, "./arquivos/output.txt");
 		
 		System.out.println("FIM"); 
 		
