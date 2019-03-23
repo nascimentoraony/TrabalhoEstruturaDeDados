@@ -27,8 +27,6 @@ public class Ordenacao {
 			for(int i = 0;i<(V.length-1);i++) {
 				if(V[i].length()>V[i+1].length()) {
 					String aux = V[i];
-//					int a = V[i].length(); 
-//					int b = V[i+1].length();
 					V[i] = V[i+1];
 					V[i+1] = aux;
 					val = true;
@@ -88,7 +86,6 @@ public class Ordenacao {
 				j--;
 			}
 			if (i <= j) {
-				//moment of swap.
 				temp = V[i];
 				V[i] = V[j];
 				V[j] = temp;
@@ -99,8 +96,6 @@ public class Ordenacao {
 		if (begin < j) {QuickSort(V, begin, j);}
 		else if (i < end) {QuickSort(V, i, end);
 		}
-		//System.out.println(Arrays.toString(V));
-		//Precisa Validar esse retorno.
 		return V;	
 	}
 }
