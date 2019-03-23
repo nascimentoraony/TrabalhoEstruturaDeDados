@@ -37,15 +37,19 @@ public class Ordenacao {
 	}
 	
 	public static String[] insertionSort(String V[]) {
-		for(int i = 0;i < V.length-1;i++) {
-			String v = V[i];
-			int j = i;
-			do {
-				V[j] = V[j-1];
-				j--;
-			}while(j>0&&V[j-1].length()>v.length());
-			V[j] = v;
-		}
+		int j;
+	    String key;
+	    int i;
+	    
+	    for (j = 1; j < V.length; j++)
+	    {
+	      key = V[j];
+	      for (i = j - 1; (i >= 0) && (V[i].length() > key.length()); i--)
+	      {
+	         V[i + 1] = V[i];
+	       }
+	        V[i + 1] = key;
+	    }
 		return V;
 	}
 	
