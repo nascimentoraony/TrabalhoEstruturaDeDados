@@ -62,7 +62,7 @@ public class Principal {
 			if (var == 2) {
 				long tempoInicial = System.currentTimeMillis();
 				
-				vetor = Ordenacao.mergeSort(vetor, 0, vetor.length);
+				vetor = Ordenacao.mergeSort(vetor, 0, vetor.length-1);
 				
 				long tempoFinal = System.currentTimeMillis();
 				
