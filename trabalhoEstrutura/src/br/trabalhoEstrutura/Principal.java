@@ -13,6 +13,7 @@ public class Principal {
 		String caminho = EscolherArquivo.caminho();
 
 		String vetor[] = ArquivoHandler.ler_arquivo(caminho);
+		String vetorOrdenado[] = vetor;
 
 		JOptionPane.showMessageDialog(null, "<<<<<< BEM VINDO AO SISTEMA >>>>>");
 
@@ -25,7 +26,7 @@ public class Principal {
 			if (var == 0) {
 				long tempoInicial = System.currentTimeMillis();
 
-				String vetorOrdenado[] = Ordenacao.BubbleSort(vetor);
+				vetorOrdenado = Ordenacao.BubbleSort(vetor);
 
 				long tempoFinal = System.currentTimeMillis();
 
@@ -37,7 +38,7 @@ public class Principal {
 			if (var == 1) {
 				long tempoInicial = System.currentTimeMillis();
 
-				vetor = Ordenacao.QuickSort(vetor, 0, vetor.length);
+				vetorOrdenado = Ordenacao.QuickSort(vetor, 0, vetor.length);
 
 				long tempoFinal = System.currentTimeMillis();
 
@@ -48,7 +49,7 @@ public class Principal {
 			if (var == 2) {
 				long tempoInicial = System.currentTimeMillis();
 
-				vetor = Ordenacao.insertionSort(vetor);
+				vetorOrdenado = Ordenacao.insertionSort(vetor);
 
 				long tempoFinal = System.currentTimeMillis();
 
@@ -60,7 +61,7 @@ public class Principal {
 			if (var == 3) {
 				long tempoInicial = System.currentTimeMillis();
 
-				vetor = Ordenacao.mergeSort(vetor, 0, vetor.length - 1);
+				vetorOrdenado = Ordenacao.mergeSort(vetor, 0, vetor.length - 1);
 
 				long tempoFinal = System.currentTimeMillis();
 
@@ -72,7 +73,7 @@ public class Principal {
 			if (var == 4) {
 				long tempoInicial = System.currentTimeMillis();
 
-				Ordenacao.SelectionSort(vetor);
+				vetorOrdenado = Ordenacao.SelectionSort(vetor);
 
 				long tempoFinal = System.currentTimeMillis();
 
@@ -81,7 +82,7 @@ public class Principal {
 				JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + "ms");
 			}
 
-			op = JOptionPane.showConfirmDialog(null, "Deseja alterar o método de Ordenação?");
+			op = 1;//JOptionPane.showConfirmDialog(null, "Deseja alterar o método de Ordenação?");
 		} while (op == 0);
 
 		int opp = 0;
@@ -89,10 +90,11 @@ public class Principal {
 		do {
 
 			JOptionPane.showMessageDialog(null, "Criação do Arquivo Ordenado!");
+			
+			String caminhoGravacao = EscolherArquivo.caminho();
+			ArquivoHandler.criar_arquivo(vetor, caminhoGravacao+"output.txt");
 
-			ArquivoHandler.criar_arquivo(vetor, "./arquivos/output.txt");
-
-			opp = JOptionPane.showConfirmDialog(null, "Finalizar a Criação ?");
+			opp = 1;//JOptionPane.showConfirmDialog(null, "Finalizar a Criação ?");
 
 		} while (opp == 0);
 
