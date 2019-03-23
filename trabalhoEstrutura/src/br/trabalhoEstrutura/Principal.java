@@ -98,7 +98,9 @@ public class Principal {
 			
 		} while (opp == 0); 
 		
-		String [] searchOtion = {""};
+		String [] searchOtion = {};
+		
+		
 		
 		
 		
