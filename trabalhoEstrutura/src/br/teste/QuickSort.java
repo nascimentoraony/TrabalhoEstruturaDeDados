@@ -7,7 +7,7 @@ import javax.swing.JOptionPane;
 public class QuickSort {
 
 		
-	private static void quickSort (int[] A,int begin, int end){
+	private static void quickSort(int[] A,int begin, int end){
 		
 		if (begin < end) {
 			int positionPivot = separar(A, begin, end);;
