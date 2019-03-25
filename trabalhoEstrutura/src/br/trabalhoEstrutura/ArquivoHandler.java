@@ -6,6 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.swing.JOptionPane;
+
 public class ArquivoHandler {
 
 	public static int tamanhoArquivo(String caminho) throws IOException {
@@ -52,7 +54,7 @@ public class ArquivoHandler {
 			for(int i=0; i<arquivo.length; i++) {
 				 escrever.println(arquivo[i] + " |" + arquivo[i].length()+"| ");
 			}
-			System.out.println("Arquivo criado com sucesso! ");
+			JOptionPane.showMessageDialog(null, "Arquivo criado com sucesso! ");
 			criar_arquivo.close();
 			escrever.close();
 		} catch (IOException ex) {System.err.printf("Erro: aquivo não criado! ", ex.getMessage());}

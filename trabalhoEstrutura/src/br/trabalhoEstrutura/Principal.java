@@ -21,7 +21,7 @@ public class Principal {
 		int var = JOptionPane.showOptionDialog(null, "Escolha qual Método de Ordenação deseja executar;", "OPÇÕES",
 				JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, ordenationOption,
 				ordenationOption[0]);
-
+		
 		do {
 			if (var == 0) {
 				long tempoInicial = System.currentTimeMillis();
@@ -46,7 +46,7 @@ public class Principal {
 
 				JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + "ms");
 			}
-			if (var == 2) {
+			else if (var == 2) {
 				long tempoInicial = System.currentTimeMillis();
 
 				vetorOrdenado = Ordenacao.insertionSort(vetor);
@@ -58,7 +58,7 @@ public class Principal {
 				JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + "ms");
 			}
 
-			if (var == 3) {
+			else if (var == 3) {
 				long tempoInicial = System.currentTimeMillis();
 
 				vetorOrdenado = Ordenacao.mergeSort(vetor, 0, vetor.length - 1);
@@ -70,7 +70,7 @@ public class Principal {
 				JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + "ms");
 			}
 
-			if (var == 4) {
+			else if (var == 4) {
 				long tempoInicial = System.currentTimeMillis();
 
 				vetorOrdenado = Ordenacao.SelectionSort(vetor);
@@ -92,15 +92,30 @@ public class Principal {
 			JOptionPane.showMessageDialog(null, "Criação do Arquivo Ordenado...");
 			
 			String caminhoGravacao = EscolherArquivo.caminho();
+			
 			ArquivoHandler.criar_arquivo(vetorOrdenado, caminhoGravacao);
 
 			opp = 1;//JOptionPane.showConfirmDialog(null, "Finalizar a Criação ?");
 
 		} while (opp == 0);
 
-		String[] searchOption = {};
+		String[] searchOption = {"Busca Sequencial", "Busca Binaria"};
+		int var1 = JOptionPane.showOptionDialog(null, "Escolha qual Método de Ordenação deseja executar;", "OPÇÕES",
+				JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, searchOption,
+				searchOption[0]);
+		
+		if (var1 == 0) {
+			String search = JOptionPane.showInputDialog("Informe a Palavra que deseja Buscar");
+			
+			Busca.buscaSequencial(vetorOrdenado, search);
+			
+		}
+		
+		else if (var1 == 1) {
+			String search = JOptionPane.showInputDialog("Informe a Palavra que deseja Buscar");
 
-		System.out.println("FIM");
+			Busca.binarySearch(vetorOrdenado, search, 0, vetorOrdenado.length - 1);
+		}
 
 	}
 

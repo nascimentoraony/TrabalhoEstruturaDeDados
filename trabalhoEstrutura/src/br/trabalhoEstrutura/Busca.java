@@ -19,11 +19,9 @@ public class Busca {
         if (busca == 1)
         {
         	JOptionPane.showMessageDialog(null, " [ " + search + " ], palavra encontrada na " + (i+1) + " posição !");
-            System.out.println(" [ " + search + " ], palavra encontrada na " + (i+1) + " posição !");
         }
         else
         {
-        	JOptionPane.showMessageDialog(null, "Palavra não encontrada !");
             System.out.println("Palavra não encontrada !");
         }
 }
