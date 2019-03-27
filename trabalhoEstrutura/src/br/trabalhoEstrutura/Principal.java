@@ -6,10 +6,16 @@ import javax.swing.JOptionPane;
 
 import br.teste.EscolherArquivo;
 
+import br.teste.ProgressBar;
+
 public class Principal {
 
 	public static void main(String[] args) throws IOException {
-
+		
+		ProgressBar moment = new ProgressBar();
+		
+		
+		
 		String[] system = { "Iniciar", "Finalizar" };
 		int varI = JOptionPane.showOptionDialog(null, "Sistema de Ordenação de Dicionários TXT",
 				"SISORD - Versão 1.4.2", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, system,
@@ -41,6 +47,10 @@ public class Principal {
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.BubbleSort(vetor);
+					
+					//moment.setVisible(true);
+					
+					//moment.iterate();
 
 					tempoFinal = System.currentTimeMillis();
 
@@ -52,30 +62,44 @@ public class Principal {
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.QuickSort(vetor, 0, vetor.length);
-
+					
+					moment.setVisible(true);
+					
+					moment.iterate();
+					
+					moment.setVisible(false);
+					
 					tempoFinal = System.currentTimeMillis();
 
 					JOptionPane.showMessageDialog(null, "QuickSort Executado!");
 
-					JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + "ms");
+					JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + " ms");
 					break;
 
 				case 2:
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.insertionSort(vetor);
+					
+					//moment.setVisible(true);
+					
+					//moment.iterate();
 
 					tempoFinal = System.currentTimeMillis();
 
 					JOptionPane.showMessageDialog(null, "InsertionSort Executado!");
 
-					JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + "ms");
+					JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + " ms");
 					break;
 
 				case 3:
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.mergeSort(vetor, 0, vetor.length - 1);
+					
+					//moment.setVisible(true);
+					
+					//moment.iterate();
 
 					tempoFinal = System.currentTimeMillis();
 
@@ -88,6 +112,10 @@ public class Principal {
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.SelectionSort(vetor);
+					
+					//moment.setVisible(true);
+					
+					//moment.iterate();
 
 					tempoFinal = System.currentTimeMillis();
 
