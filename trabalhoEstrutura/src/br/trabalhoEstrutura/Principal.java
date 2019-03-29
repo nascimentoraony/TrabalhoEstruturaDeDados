@@ -35,8 +35,7 @@ public class Principal {
 				long tempoInicial = 0;
 				long tempoFinal = 0;
 
-				String[] ordenationOption = { "BubbleSort", "QuickSort", "InsertionSort", "MergeSort",
-						"SelectionSort" };
+				String[] ordenationOption = { "BubbleSort", "InsertionSort", "MergeSort","SelectionSort" };
 				int var = JOptionPane.showOptionDialog(null, "Escolha qual Método de Ordenação deseja executar;",
 						"OPÇÕES", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, ordenationOption,
 						ordenationOption[0]);
@@ -66,28 +65,6 @@ public class Principal {
 				case 1:
 					tempoInicial = System.currentTimeMillis();
 
-					vetorOrdenado = Ordenacao.QuickSort(vetor, 0, vetor.length);
-
-					moment.setVisible(true);
-
-					moment.setAlwaysOnTop(true);
-
-					moment.toFront();
-
-					moment.iterate();
-
-					moment.setVisible(false);
-
-					tempoFinal = System.currentTimeMillis();
-
-					JOptionPane.showMessageDialog(null, "QuickSort Executado!");
-
-					JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + " ms");
-					break;
-
-				case 2:
-					tempoInicial = System.currentTimeMillis();
-
 					vetorOrdenado = Ordenacao.insertionSort(vetor);
 					moment.setVisible(true);
 
@@ -106,7 +83,7 @@ public class Principal {
 					JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + " ms");
 					break;
 
-				case 3:
+				case 2:
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.mergeSort(vetor, 0, vetor.length - 1);
@@ -128,7 +105,7 @@ public class Principal {
 					JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + "ms");
 					break;
 
-				case 4:
+				case 3:
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.SelectionSort(vetor);
