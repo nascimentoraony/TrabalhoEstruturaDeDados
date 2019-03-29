@@ -39,7 +39,7 @@ public class Principal {
 				int var = JOptionPane.showOptionDialog(null, "Escolha qual Método de Ordenação deseja executar;",
 						"OPÇÕES", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, ordenationOption,
 						ordenationOption[0]);
-     
+           
 				switch (var) {
 				case 0:
 					tempoInicial = System.currentTimeMillis();
