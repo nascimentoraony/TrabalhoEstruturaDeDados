@@ -29,8 +29,8 @@ public class Busca {
 		if (start>end) {
 			JOptionPane.showMessageDialog(null, "Não existe a palavra procurada.");
 			
-		} else {
-			int meio = (start+end)/2;
+		} else {   
+			int meio = (start+end)/2; 
 			if (V[meio].length()==busca.length()) {
 				if (V[meio].equalsIgnoreCase(busca)) {
 					JOptionPane.showMessageDialog(null, "Palavra encontrada na posição \" + meio + \" do vetor.");
