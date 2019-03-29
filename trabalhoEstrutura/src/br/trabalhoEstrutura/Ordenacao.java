@@ -85,35 +85,4 @@ public class Ordenacao {
 			i++;
 		}
 	}
-	
-	public static String[] QuickSort(String V [], int ini, int end) {
-
-		return V;	
-	}
-	
-	private static int separar(int[] A, int begin, int end) {
-		int pivot = A [begin];
-		int i = begin + 1; 
-		int e = end; 
-		
-		while (i <= e) {
-			if (A [i] <= pivot) {
-				i++;
-			}
-			else if (pivot < A[e]) {
-				e--;
-			}
-			else {
-				int change = A[i];
-				A[i] = A [e];
-				A[e] = change; 
-				i++;
-				e--;
-				
-			}
-		}
-		A[begin] = A[e];
-		A[e] = pivot;
-		return e;
-	}
 }
