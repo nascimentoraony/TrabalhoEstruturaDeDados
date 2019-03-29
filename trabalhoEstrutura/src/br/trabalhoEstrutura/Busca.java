@@ -34,7 +34,7 @@ public class Busca {
 			if (V[meio].length()==busca.length()) {
 				if (V[meio].equalsIgnoreCase(busca)) {
 					JOptionPane.showMessageDialog(null, "Palavra encontrada na posição \" + meio + \" do vetor.");
-				} else {
+				} else {  
 					int i = meio;
 					boolean found = false;
 					do{
