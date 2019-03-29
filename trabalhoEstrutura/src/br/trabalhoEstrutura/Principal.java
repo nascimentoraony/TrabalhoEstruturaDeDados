@@ -41,7 +41,7 @@ public class Principal {
 						ordenationOption[0]);
            
 				switch (var) {
-				case 0:
+				case 0:    
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.BubbleSort(vetor);
