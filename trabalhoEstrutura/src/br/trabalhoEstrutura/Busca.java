@@ -33,30 +33,25 @@ public class Busca {
 			int meio = (start+end)/2; 
 			if (V[meio].length()==busca.length()) {
 				if (V[meio].equalsIgnoreCase(busca)) {
-					JOptionPane.showMessageDialog(null, "Palavra encontrada na posição \" + meio + \" do vetor.");
+					JOptionPane.showMessageDialog(null, "Palavra encontrada na posição " + meio + " do vetor.");
 				} else {  
 					int i = meio;
 					boolean found = false;
 					do{
 						i++;
 						if(V[i].equalsIgnoreCase(busca)) {
-							JOptionPane.showMessageDialog(null, "Palavra encontrada na posição \" + meio + \" do vetor.");
+							JOptionPane.showMessageDialog(null, "Palavra encontrada na posição " + meio + " do vetor.");
 							found = true;
-						} else {
-							found = false;
 						}
 						
 					}while(V[i].length()==busca.length()||found!=true);
-					
+					i = meio;
 					do{
 						i--;
 						if(V[i].equalsIgnoreCase(busca)) {
-							JOptionPane.showMessageDialog(null, "Palavra encontrada na posição \" + meio + \" do vetor.");
+							JOptionPane.showMessageDialog(null, "Palavra encontrada na posição " + meio + " do vetor.");
 							found = true;
-						} else {
-							found = false;
 						}
-						
 					}while(V[i].length()==busca.length()||found!=true);
 					if(found==false) {
 						JOptionPane.showMessageDialog(null, "Palavra NÃO encontrada.");
