@@ -5,9 +5,9 @@ import java.io.IOException;
 
 import javax.swing.JOptionPane;
 
-import br.teste.EscolherArquivo;
+import br.efects.EscolherArquivo;
 
-import br.teste.ProgressBar;
+import br.efects.ProgressBar;
 
 public class Principal {
 
