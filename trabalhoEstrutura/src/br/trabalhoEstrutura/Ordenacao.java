@@ -1,7 +1,5 @@
 package br.trabalhoEstrutura;
 
-import java.util.Arrays;
-
 public class Ordenacao {
 
 	

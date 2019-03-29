@@ -1,3 +1,4 @@
+
 package br.trabalhoEstrutura;
 
 import java.io.IOException;
@@ -11,11 +12,9 @@ import br.teste.ProgressBar;
 public class Principal {
 
 	public static void main(String[] args) throws IOException {
-		
+
 		ProgressBar moment = new ProgressBar();
-		
-		
-		
+
 		String[] system = { "Iniciar", "Finalizar" };
 		int varI = JOptionPane.showOptionDialog(null, "Sistema de Ordenação de Dicionários TXT",
 				"SISORD - Versão 1.4.2", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, system,
@@ -47,10 +46,16 @@ public class Principal {
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.BubbleSort(vetor);
-					
-					//moment.setVisible(true);
-					
-					//moment.iterate();
+
+					moment.setVisible(true);
+
+					moment.setAlwaysOnTop(true);
+
+					moment.toFront();
+
+					moment.iterate();
+
+					moment.setVisible(false);
 
 					tempoFinal = System.currentTimeMillis();
 
@@ -62,13 +67,17 @@ public class Principal {
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.QuickSort(vetor, 0, vetor.length);
-					
+
 					moment.setVisible(true);
-					
+
+					moment.setAlwaysOnTop(true);
+
+					moment.toFront();
+
 					moment.iterate();
-					
+
 					moment.setVisible(false);
-					
+
 					tempoFinal = System.currentTimeMillis();
 
 					JOptionPane.showMessageDialog(null, "QuickSort Executado!");
@@ -80,10 +89,15 @@ public class Principal {
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.insertionSort(vetor);
-					
-					//moment.setVisible(true);
-					
-					//moment.iterate();
+					moment.setVisible(true);
+
+					moment.setAlwaysOnTop(true);
+
+					moment.toFront();
+
+					moment.iterate();
+
+					moment.setVisible(false);
 
 					tempoFinal = System.currentTimeMillis();
 
@@ -96,10 +110,16 @@ public class Principal {
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.mergeSort(vetor, 0, vetor.length - 1);
-					
-					//moment.setVisible(true);
-					
-					//moment.iterate();
+
+					moment.setVisible(true);
+
+					moment.setAlwaysOnTop(true);
+
+					moment.toFront();
+
+					moment.iterate();
+
+					moment.setVisible(false);
 
 					tempoFinal = System.currentTimeMillis();
 
@@ -112,10 +132,16 @@ public class Principal {
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.SelectionSort(vetor);
-					
-					//moment.setVisible(true);
-					
-					//moment.iterate();
+
+					moment.setVisible(true);
+
+					moment.setAlwaysOnTop(true);
+
+					moment.toFront();
+
+					moment.iterate();
+
+					moment.setVisible(false);
 
 					tempoFinal = System.currentTimeMillis();
 
@@ -166,10 +192,9 @@ public class Principal {
 
 				opp = JOptionPane.showConfirmDialog(null, "Deseja Carregar um novo arquivo ?");
 
-			} while  ( opp == 1);
-		}
-		else {
-			JOptionPane.showMessageDialog(null, "Programa Finalizado");
+			} while (opp == 0);
+		} else {
+			JOptionPane.showMessageDialog(null, "Programa Finalizado Com Sucesso !");
 		}
 	}
 }
