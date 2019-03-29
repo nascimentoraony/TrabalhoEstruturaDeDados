@@ -1,4 +1,4 @@
-package br.teste;
+package br.efects;
 
 import javax.swing.JOptionPane;
 import javax.swing.JFileChooser;
