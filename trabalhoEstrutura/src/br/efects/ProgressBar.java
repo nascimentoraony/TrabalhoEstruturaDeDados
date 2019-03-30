@@ -11,6 +11,7 @@ public class ProgressBar extends JFrame {
 
 	public ProgressBar() {
 		jb = new JProgressBar(0, 2000);
+		//jb = new JProgressBar(0, 3000);
 		jb.setBounds(40, 40, 160, 30);
 		jb.setValue(0);
 		jb.setStringPainted(true);

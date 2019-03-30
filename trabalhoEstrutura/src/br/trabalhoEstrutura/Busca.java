@@ -21,7 +21,7 @@ public class Busca {
         }
         else
         {
-            System.out.println("Palavra não encontrada !");
+        	JOptionPane.showMessageDialog(null, "Palavra não encontrada !");
         }
 }
 

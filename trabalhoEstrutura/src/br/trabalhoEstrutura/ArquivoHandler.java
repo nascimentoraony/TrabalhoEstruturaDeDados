@@ -52,7 +52,7 @@ public class ArquivoHandler {
 			FileOutputStream criar_arquivo = new FileOutputStream(caminho);
 			PrintWriter escrever = new PrintWriter(criar_arquivo);
 			for(int i=0; i<arquivo.length; i++) {
-				 escrever.println(arquivo[i] + " |" + arquivo[i].length()+"| ");
+				 escrever.println(arquivo[i] + " |" + arquivo[i].length()+" | ");
 			}
 			JOptionPane.showMessageDialog(null, "Arquivo criado com sucesso! ");
 			criar_arquivo.close();

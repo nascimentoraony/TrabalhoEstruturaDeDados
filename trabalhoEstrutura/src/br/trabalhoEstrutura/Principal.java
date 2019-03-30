@@ -18,7 +18,7 @@ public class Principal {
 		String[] system = { "Iniciar", "Finalizar" };
 		int varI = JOptionPane.showOptionDialog(null, "Sistema de Ordenação de Dicionários TXT",
 				"SISORD - Versão 1.4.2", JOptionPane.DEFAULT_OPTION, JOptionPane.INFORMATION_MESSAGE, null, system,
-				system[0]);
+				system[0]);	
 
 		int opp = 0;
 
@@ -45,6 +45,8 @@ public class Principal {
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.BubbleSort(vetor);
+					
+					tempoFinal = System.currentTimeMillis();
 
 					moment.setVisible(true);
 
@@ -55,8 +57,6 @@ public class Principal {
 					moment.iterate();
 
 					moment.setVisible(false);
-
-					tempoFinal = System.currentTimeMillis();
 
 					JOptionPane.showMessageDialog(null, "BubbleSort Executado!");
 
@@ -66,6 +66,9 @@ public class Principal {
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.insertionSort(vetor);
+					
+					tempoFinal = System.currentTimeMillis();
+					
 					moment.setVisible(true);
 
 					moment.setAlwaysOnTop(true);
@@ -75,8 +78,6 @@ public class Principal {
 					moment.iterate();
 
 					moment.setVisible(false);
-
-					tempoFinal = System.currentTimeMillis();
 
 					JOptionPane.showMessageDialog(null, "InsertionSort Executado!");
 
@@ -162,14 +163,24 @@ public class Principal {
 							break;
 						}
 
-						op = JOptionPane.showConfirmDialog(null, "Deseja Realizar outra busca ?");
+						op = JOptionPane.showConfirmDialog(null, "Deseja Realizar outra Método de busca ?");
+						
 					} while (op == 0);
-
+					
+					if (op == 1) {
+						JOptionPane.showInternalMessageDialog(null, "Métodos de Busca encerrados com Sucesso !");
+					}
 				}
 
 				opp = JOptionPane.showConfirmDialog(null, "Deseja Carregar um novo arquivo ?");
 
+				if (opp == 1) {
+					JOptionPane.showMessageDialog(null, "Programa Finalizado com Sucesso!"
+							+ "Obrigado Por Utilizar nosso Sistema");
+				}
 			} while (opp == 0);
+			
+			
 		} else {
 			JOptionPane.showMessageDialog(null, "Programa Finalizado Com Sucesso !");
 		}
