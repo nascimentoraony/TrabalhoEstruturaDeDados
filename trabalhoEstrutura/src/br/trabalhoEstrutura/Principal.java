@@ -64,7 +64,7 @@ public class Principal {
 					JOptionPane.showMessageDialog(null, "BubbleSort Executado!");
 
 					JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + "ms");
-
+    
 				case 1:
 					vetorOrdenado = vetor;
 					tempoInicial = System.currentTimeMillis();
