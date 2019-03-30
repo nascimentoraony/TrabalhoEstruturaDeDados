@@ -40,7 +40,7 @@ public class Busca {
 					do{
 						i++;
 						if(V[i].equalsIgnoreCase(busca)) {
-							JOptionPane.showMessageDialog(null, "Palavra encontrada na posição " + i + " do vetor.");
+							JOptionPane.showMessageDialog(null, "Palavra encontrada na posição " + i+1 + " do vetor.");
 							found = true;
 						}
 						
@@ -49,7 +49,7 @@ public class Busca {
 					do{
 						i--;
 						if(V[i].equalsIgnoreCase(busca)) {
-							JOptionPane.showMessageDialog(null, "Palavra encontrada na posição " + i + " do vetor.");
+							JOptionPane.showMessageDialog(null, "Palavra encontrada na posição " + i+1 + " do vetor.");
 							found = true;
 						}
 					}while(V[i].length()==busca.length()||found!=true);
