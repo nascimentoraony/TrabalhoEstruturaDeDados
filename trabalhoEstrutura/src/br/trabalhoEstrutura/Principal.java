@@ -42,14 +42,15 @@ public class Principal {
            
 				switch (var) {
 				case 0:    
+					vetorOrdenado = vetor;
 					tempoInicial = System.currentTimeMillis();
 
-					vetorOrdenado = Ordenacao.BubbleSort(vetor);
+					vetorOrdenado = Ordenacao.BubbleSort(vetorOrdenado);
 					
 					tempoFinal = System.currentTimeMillis();
 					
-					JOptionPane.showMessageDialog(null, "Lendo Arquivo!");
-						
+					JOptionPane.showMessageDialog(null, "O Processo se iniciara em instantes ... AGUARDE !!!");
+					
 					moment.setVisible(true);
 
 					moment.setAlwaysOnTop(true);
@@ -65,11 +66,14 @@ public class Principal {
 					JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + "ms");
 
 				case 1:
+					vetorOrdenado = vetor;
 					tempoInicial = System.currentTimeMillis();
 
-					vetorOrdenado = Ordenacao.insertionSort(vetor);
+					vetorOrdenado = Ordenacao.insertionSort(vetorOrdenado);
 					
 					tempoFinal = System.currentTimeMillis();
+					
+					JOptionPane.showMessageDialog(null, "O Processo se iniciara em instantes ... AGUARDE !!!");
 					
 					moment.setVisible(true);
 
@@ -87,11 +91,14 @@ public class Principal {
 					break;
 
 				case 2:
+					vetorOrdenado = vetor;
 					tempoInicial = System.currentTimeMillis();
 
-					vetorOrdenado = Ordenacao.mergeSort(vetor, 0, vetor.length - 1);
+					vetorOrdenado = Ordenacao.mergeSort(vetorOrdenado, 0, vetorOrdenado.length - 1);
 					
 					tempoFinal = System.currentTimeMillis();
+					
+					JOptionPane.showMessageDialog(null, "O Processo se iniciara em instantes ... AGUARDE !!!");
 
 					moment.setVisible(true);
 
@@ -109,11 +116,14 @@ public class Principal {
 					break;
 
 				case 3:
+					vetorOrdenado = vetor;
 					tempoInicial = System.currentTimeMillis();
 
-					vetorOrdenado = Ordenacao.SelectionSort(vetor);
+					vetorOrdenado = Ordenacao.SelectionSort(vetorOrdenado);
 					
 					tempoFinal = System.currentTimeMillis();
+					
+					JOptionPane.showMessageDialog(null, "O Processo se iniciara em instantes ... AGUARDE !!!");
 
 					moment.setVisible(true);
 
