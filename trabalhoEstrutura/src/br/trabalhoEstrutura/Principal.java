@@ -47,7 +47,9 @@ public class Principal {
 					vetorOrdenado = Ordenacao.BubbleSort(vetor);
 					
 					tempoFinal = System.currentTimeMillis();
-
+					
+					JOptionPane.showMessageDialog(null, "Lendo Arquivo!");
+						
 					moment.setVisible(true);
 
 					moment.setAlwaysOnTop(true);
@@ -175,8 +177,9 @@ public class Principal {
 				opp = JOptionPane.showConfirmDialog(null, "Deseja Carregar um novo arquivo ?");
 
 				if (opp == 1) {
-					JOptionPane.showMessageDialog(null, "Programa Finalizado com Sucesso!"
-							+ "Obrigado Por Utilizar nosso Sistema");
+					JOptionPane.showMessageDialog(null, "Programa Finalizado com Sucesso ! "
+							+ " Obrigado Por Utilizar nosso Sistema");
+					break;
 				}
 			} while (opp == 0);
 			
