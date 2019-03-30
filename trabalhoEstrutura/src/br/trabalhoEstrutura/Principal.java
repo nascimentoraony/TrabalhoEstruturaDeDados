@@ -78,7 +78,7 @@ public class Principal {
 					moment.iterate();
 
 					moment.setVisible(false);
-
+   
 					JOptionPane.showMessageDialog(null, "InsertionSort Executado!");
 
 					JOptionPane.showMessageDialog(null, "Executado em: " + (tempoFinal - tempoInicial) + " ms");
