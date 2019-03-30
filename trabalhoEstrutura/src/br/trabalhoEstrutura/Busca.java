@@ -7,7 +7,7 @@ public class Busca {
 	public static void buscaSequencial(String V [], String search) {
         int i;
         int busca = 0;
-        for(i = 0; i<10; i++)
+        for(i = 0; i < V.length; i++)
         {
             if (search.equals(V[i]))
             {
