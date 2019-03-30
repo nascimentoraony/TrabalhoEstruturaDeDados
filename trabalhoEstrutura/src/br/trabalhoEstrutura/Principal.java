@@ -88,6 +88,8 @@ public class Principal {
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.mergeSort(vetor, 0, vetor.length - 1);
+					
+					tempoFinal = System.currentTimeMillis();
 
 					moment.setVisible(true);
 
@@ -98,8 +100,6 @@ public class Principal {
 					moment.iterate();
 
 					moment.setVisible(false);
-
-					tempoFinal = System.currentTimeMillis();
 
 					JOptionPane.showMessageDialog(null, "MergeSort Executado!");
 
@@ -110,6 +110,8 @@ public class Principal {
 					tempoInicial = System.currentTimeMillis();
 
 					vetorOrdenado = Ordenacao.SelectionSort(vetor);
+					
+					tempoFinal = System.currentTimeMillis();
 
 					moment.setVisible(true);
 
@@ -120,8 +122,6 @@ public class Principal {
 					moment.iterate();
 
 					moment.setVisible(false);
-
-					tempoFinal = System.currentTimeMillis();
 
 					JOptionPane.showMessageDialog(null, "SelectionSort Executado!");
 
